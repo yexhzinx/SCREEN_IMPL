@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        from : 사용자로부터 특정정보를 받아 서버로 전달하는데 사용되는 태그
+        action Attribute : 전달받는 서버 URI
+        method Attribute : 서버로 요청하는 방식
+            - GET        : 사용자 요청 정보를 Query String으로 전달(Default)
+            - POST       : 사용자 요청 정보를 Request body(Payload)로 전달
+            - PUT        :
+            - PATCH      :
+            - DELETE     :
+
+    -->
+
+    <form action="/test.jsp" method="post">
+        <div>
+            <label>ID</label>
+            <input name="userid" type="text"/>
+            <a href="javascript: void(0)">confirm</a>
+        </div>
+        <div>
+            <label>PW</label>
+            <input name="password" type="password"/>
+        </div>
+        <div>
+            <label>PWcheck</label>
+            <input name="re-password" type="password"/>
+        </div>
+        <div>
+            <label>Name</label>
+            <input name="username" type="text"/>
+        </div>
+        <div>
+            <label>Post Code</label>
+            <input name="zipcode" type="text"/>
+            <a href="javascript:void(0)">Search</a>
+        </div>
+        <div>
+            <label>Address</label>
+            <input name="addr1" type="text"/>
+        </div>
+        <div>
+            <label>+</label>
+            <input name="addr2" type="text"/>
+        </div>
+        <div>
+            <label>Phone Number</label>
+            <select name="" id="">
+                <option value="" selected>010</option>
+                <option value="">011</option>
+                <option value="">017</option>
+                <option value="">070</option>
+            </select>
+            <input name="" type="text"/>
+            <input name="" type="text"/>
+        </div>
+        <div>
+            <label>+</label>
+            <select name="" id="">
+                <option value="" selected>053</option>
+                <option value="">02</option>
+            </select>
+            <input name="" type="text"/>
+            <input name="" type="text"/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input name="" type="text"/>
+            <select name="" id="">
+                <option value="" selected>@gamil.com</option>
+                <option value="">@naver.com</option>
+                <option value="">@outlook.co.kr</option>
+                <option value="">@daum.net</option>
+                <option value="">@nate.com</option>
+            </select>
+        </div>
+        <div>
+            <label>Birthdate</label>
+            <input name="birth" type="radio"/> 양력
+            <input name="birth" type="radio"/> 음력
+        </div>
+         <div>
+            <select name="" id="">
+                <option value="" selected>2025</option>
+                <option value="" >2024</option>
+                <option value="" >2023</option>
+                <option value="" >2022</option>
+                <option value="" >2021</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected>01</option>
+                <option value="" >02</option>
+                <option value="" >03</option>
+                <option value="" >04</option>
+                <option value="" >05</option>
+                <option value="" >06</option>
+                <option value="" >07</option>
+                <option value="" >08</option>
+                <option value="" >09</option>
+                <option value="" >10</option>
+                <option value="" >11</option>
+                <option value="" >12</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected>01</option>
+                <option value="" >02</option>
+                <option value="" >03</option>
+                <option value="" >04</option>
+                <option value="" >05</option>
+                <option value="" >06</option>
+                <option value="" >07</option>
+                <option value="" >08</option>
+                <option value="" >09</option>
+                <option value="" >10</option>
+                <option value="" >11</option>
+                <option value="" >12</option>
+                <option value="" >13</option>
+                <option value="" >14</option>
+                <option value="" >15</option>
+                <option value="" >16</option>
+                <option value="" >17</option>
+                <option value="" >18</option>
+                <option value="" >19</option>
+                <option value="" >20</option>
+                <option value="" >21</option>
+            </select>
+        </div>
+        <hr/>
+         <div>
+            <input id="email-recv" type="checkbox"/>
+            <label for="email-recv">Email Receive</label>
+            <input id="sms-recv" type="checkbox"/> 
+            <label for="sms-recv">SMS Receive</label>
+        </div>
+        <div>
+            <input type="submit" value="sign up"/>
+        </div>
+
+
+    </form>
+
+</body>
+</html>

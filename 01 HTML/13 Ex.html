@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* common */
+        *{
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(55, 56, 55);
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .btn{
+            border: 1px solid gray;
+            min-width: 60px;
+            height: 100%;
+            line-height: 35px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .btn-submit{
+            border: 1px solid rgb(0,0,0,0);
+            height: 101%;
+            width: 100%;
+            color: white;
+            background-color: rgb(238, 152, 71);
+        }
+        .top-header{
+            height: 10px !important;
+            background-color: rgb(252, 236, 144);
+        }
+        .title{
+            margin-bottom: 20px !important;
+            border-bottom: 1px solid gray;
+             padding-bottom: 10px;
+        }
+        .title>h1{
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+    /* form */
+        form{
+            width: 500px;
+            border: 1px solid gray;
+            margin: 50px auto;
+        }
+        form>.row{
+            margin: 10px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 5px;
+            height: 35px;
+        }
+        form>.row>label{
+            display: block;
+            min-width: 100px;
+            height: 100%;
+            line-height: 35px;
+            
+        }
+        form>.row>input[type="text"],
+            form>.row>input[type="password"],
+            form>.row>select
+            {
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border-radius: 0;
+                border: 1px solid gray;
+            }
+
+    </style>
+
+</head>
+<body>
+
+    <form action="/test.jsp" method="post">
+        <div class="row top-header">
+        </div>
+
+        <div class="row title">
+            <h1>회원가입@ºㅁº@</h1>
+        </div>
+        <div class="row">
+            <label>이름</label>
+            <input name="name" type="text"/>
+        </div>
+        <div class="row">
+            <label>닉네임</label>
+            <input name="nickname" type="text"/>
+            <a class="btn" href="javascript: void(0)">중복확인</a>
+        </div>
+        <div class="row">
+            <label>이메일</label>
+            <input name="" type="text"/>
+            <select name="" id="">
+                <option value="" selected>@gmail.com</option>
+                <option value="" >@naver.com</option>
+                <option value="" >@nate.com</option>
+            </select>
+        </div>
+        <div class="row">
+            <label>주소</label>
+            <input name="addr1" type="text"/>
+        </div>
+        <div class="row">
+            <label>상세주소(선택)</label>
+            <input name="addr2" type="text"/>
+        </div>
+        <div class="row">
+            <label>가입경로</label>
+            <select name="" id="">
+                <option value="" >SNS</option>
+                <option value="" >웹서칭</option>
+                <option value="" >가족/지인</option>
+                <option value="" >기타</option>
+            </select><br>
+        </div>
+        <div class="row">
+            <label>추천인코드(선택)</label>
+            <input name="code" type="text"/>
+        </div>
+        <hr/>
+        <div class="row">
+            <input name="" type="checkbox"/>
+            <label for="agree">(필수)개인정보 수집에 동의합니다.</label><br>
+            <input name="" type="checkbox"/> 
+            <label for="agree">(선택)이메일 수신에 동의합니다.</label>
+        </div>
+
+        <div class="row">
+            <input class="btn-submit" type="submit" value="가입 완료">
+        </div>
+    </form>
+</body>
+</html>
