@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* common */
+        *{
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* form */
+        form{
+            width: 375px;
+            border: 1px solid;
+            margin: 50px auto;
+            padding: 5px;
+        }
+        form>.row{
+            margin: 10px;
+            height: 35px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 5px;
+        }
+        form>.row>label{
+            display: block;
+            min-width: 85px;
+            border: 1px solid;
+            height: 100%;
+            line-height: 35px;
+        }
+        form>.row>input[type="text"],
+        form>.row>input[type="password"],
+        form>.row>select
+        {
+            width: 100%;
+            height: 100%
+        }
+        .btn{
+            border: 1px solid gray;
+            width: 60px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .btn-submit{
+            width: 100%;
+            border: 0;
+            color: white;
+            background-color: royalblue;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <form action="/test.jsp" method="post">
+        <div class="row">
+            <h1>회원가입</h1>
+        </div>
+        <div class="row">
+            <label>ID</label>
+            <input name="userid" type="text"/>
+            <a class="btn" href="javascript: void(0)">confirm</a>
+        </div>
+        <div class="row">
+            <label>PW</label>
+            <input name="password" type="password"/>
+        </div>
+        <div class="row">
+            <label>PWcheck</label>
+            <input name="re-password" type="password"/>
+        </div>
+        <div class="row">
+            <label>Name</label>
+            <input name="username" type="text"/>
+        </div>
+        <div class="row">
+            <label>Post Code</label>
+            <input name="zipcode" type="text"/>
+            <a class="btn" href="javascript:void(0)">Search</a>
+        </div>
+        <div class="row">
+            <label>Address</label>
+            <input name="addr1" type="text"/>
+        </div>
+        <div class="row">
+            <label>+</label>
+            <input name="addr2" type="text"/>
+        </div>
+        <div class="row">
+            <label>Phone Number</label>
+            <select name="" id="">
+                <option value="" selected>010</option>
+                <option value="">011</option>
+                <option value="">017</option>
+                <option value="">070</option>
+            </select>
+            <input name="" type="text"/>
+            <input name="" type="text"/>
+        </div>
+        <div class="row">
+            <label>+</label>
+            <select name="" id="">
+                <option value="" selected>053</option>
+                <option value="">02</option>
+            </select>
+            <input name="" type="text"/>
+            <input name="" type="text"/>
+        </div>
+        <div class="row">
+            <label>Email</label>
+            <input name="" type="text"/>
+            <select name="" id="">
+                <option value="" selected>@gamil.com</option>
+                <option value="">@naver.com</option>
+                <option value="">@outlook.co.kr</option>
+                <option value="">@daum.net</option>
+                <option value="">@nate.com</option>
+            </select>
+        </div>
+        <div class="row">
+            <label>Birthdate</label>
+            <input name="birth" type="radio"/> 양력
+            <input name="birth" type="radio"/> 음력
+        </div>
+         <div class="row">
+            <select name="" id="">
+                <option value="" selected>2025</option>
+                <option value="" >2024</option>
+                <option value="" >2023</option>
+                <option value="" >2022</option>
+                <option value="" >2021</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected>01</option>
+                <option value="" >02</option>
+                <option value="" >03</option>
+                <option value="" >04</option>
+                <option value="" >05</option>
+                <option value="" >06</option>
+                <option value="" >07</option>
+                <option value="" >08</option>
+                <option value="" >09</option>
+                <option value="" >10</option>
+                <option value="" >11</option>
+                <option value="" >12</option>
+            </select>
+            <select name="" id="">
+                <option value="" selected>01</option>
+                <option value="" >02</option>
+                <option value="" >03</option>
+                <option value="" >04</option>
+                <option value="" >05</option>
+                <option value="" >06</option>
+                <option value="" >07</option>
+                <option value="" >08</option>
+                <option value="" >09</option>
+                <option value="" >10</option>
+                <option value="" >11</option>
+                <option value="" >12</option>
+                <option value="" >13</option>
+                <option value="" >14</option>
+                <option value="" >15</option>
+                <option value="" >16</option>
+                <option value="" >17</option>
+                <option value="" >18</option>
+                <option value="" >19</option>
+                <option value="" >20</option>
+                <option value="" >21</option>
+            </select>
+        </div>
+        <hr/>
+         <div class="row">
+            <input id="email-recv" type="checkbox"/>
+            <label for="email-recv">Email Receive</label>
+            <input id="sms-recv" type="checkbox"/> 
+            <label for="sms-recv">SMS Receive</label>
+        </div>
+        <div class="row">
+            <input class="btn btn-submit" type="submit" value="sign up"/>
+        </div>
+
+
+    </form>
+
+</body>
+</html>
