@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* common */
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            padding: 0;
+            margin: 3px;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* header */
+        .wrapper>header>nav {
+            height: 50px;
+        }
+
+        /* nav's menu */
+        .wrapper>header>nav>ul.main-menu {
+            justify-content: space-between;
+            display: flex;
+            height: 100%;
+        }
+
+        .wrapper>header>nav>ul.main-menu>li {
+            height: 100%;
+            padding: 0 1px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        .wrapper>header>nav>ul.main-menu>li {
+            display: block;
+            height: 100%;
+            line-height: 50px;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu {
+            position: relative;
+            left: 0;
+            top: 50px;
+
+            display: none;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li {
+            background-color: beige;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+        }
+        .wrapper>header>nav>ul.main-menu>li>ul.sub-menu>li>a {
+            display: block;
+        }
+        .wrapper>header>nav>ul.main-menu>li>a {
+            padding: 10px;
+        }
+        .wrapper>header>nav>ul.main-menu>li:hover>.sub-menu{
+            display:block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="top-header"></div>
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="javascript:void(0)">PACKAGE</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">HERO이순신패키지</a></li>
+                            <li><a href="javascript:void(0)">HERO안중근패키지</a></li>
+                            <li><a href="javascript:void(0)">독도패키지</a></li>
+                            <li><a href="javascript:void(0)">광복패키지</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">신발</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">KR시리즈</a></li>
+                            <li><a href="javascript:void(0)">하티시리즈</a></li>
+                            <li><a href="javascript:void(0)">퀀텀시리즈</a></li>
+                            <li><a href="javascript:void(0)">어반시리즈</a></li>
+                            <li><a href="javascript:void(0)">로스터시리즈</a></li>
+                            <li><a href="javascript:void(0)">슬리퍼</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">의류</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">맨투맨/후드티/긴팔티</a></li>
+                            <li><a href="javascript:void(0)">티셔츠</a></li>
+                            <li><a href="javascript:void(0)">팬츠</a></li>
+                            <li><a href="javascript:void(0)">아우터</a></li>
+                            <li><a href="javascript:void(0)">모자</a></li>
+                            <li><a href="javascript:void(0)">양말</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">KIDS</a>
+                        <ul class="sub-menu">
+                            <li><a href="javascript:void(0)">상하복세트</a></li>
+                            <li><a href="javascript:void(0)">후드티/맨투맨</a></li>
+                            <li><a href="javascript:void(0)">티셔츠</a></li>
+                            <li><a href="javascript:void(0)">실내복</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+    </div>
+
+
+</body>
+
+</html>
