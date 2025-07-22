@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // Number
+        console.log(typeof 10);
+        console.log(typeof 10.5);
+
+        // String
+        console.log(typeof "HELLO WORLD");
+        console.log(typeof 'HELLO WORLD');
+        console.log(typeof `hello world`);
+
+        // Object : {key : value, key : value}
+        // {"name": "홍길동", "age": "30", "addr": "대구"}
+        console.log(typeof {})
+        console.log(typeof {"name": "홍길동", "age": "30", "addr": "대구"})
+
+        // 비어있는 공간(의도적)
+        // null // 변수 초기화(공간형성 + 기본값 삽입 - 개발자가 의도한 값 Null)
+        console.log("---------------------")
+        let vol = null;
+        console.log(vol);
+        console.log(typeof vol);
+
+        // (비의도적)
+        // undefined // 공간형성 O or X but 기본값은 생략 - 개발자가 의도하지 못한 예외)
+        console.log("---------------------")
+        let vol2; // 공간형성시 예외발생하지는 않음
+        console.log(vol2)
+
+        // boolean
+        console.log(true);
+        console.log(false);
+
+    </script>
+
+
+
+
+</body>
+</html>

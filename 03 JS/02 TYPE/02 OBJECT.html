@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onClick="monge.sound()">몽아 짖어!</button>
+    <hr/>
+    <h1>MY CAR</h1>
+    소유자 : <input id="owner" /><br/>
+    소유자 : <input id="cat"/><br/>\
+    연료타입 : <input id="fuelType"/><br/>
+    <button id="save">저장하기</button>
+    <hr/>
+    <button onClick="myCar.accel()">가속</button>
+    <button onClick="myCar.break()">감속</button>
+    <button onClick="myCar.toString()">상태확인</button>
+    <h2>대시보드</h2>
+    <div id="gauge" style="transition: .5s; height: 50px; width: 0; background-color: orange;"></div>
+    <script>
+
+        // MyCar :속성 : 소유자, 속도, 연료량, 차종, 연료타입....
+        const myCar = {
+            // 속성
+            owner : "",
+            cat : "",
+            fuelType : "",
+            speed : 0,
+            fuelAmount : 100,
+            // 기능
+            accel: function(){
+                this.speed = this.speed+10;
+                console.log("가속처리완료 현재속도 : ", this.speed);
+
+                const gaugeEl = document.getElementById('gauge');
+                gaugeEl.style.width = `${this.speed * 2}px`;
+            },
+            break: function(){
+                this.speed = this.speed-10;
+                console.log("감속처리완료 현재속도 : ", this.speed);
+
+                const gaugeEl = document.getElementById('gauge');
+                gaugeEl.style.width = `${this.speed*2}px`;
+            },
+
+            toString: function(){
+                console.log(this.owner, this.cat, this.fuelType, this.speed, this.fuelAmount);
+            }
+        }
+
+        const saveBtn = document.getElementById('save');
+        saveBtn.addEventListener('click',()=> {
+            const ownerInputEl = document.getElementByID('owner');
+            const catInputE1 = document.getElementByID('cat');
+            const fuelTypeInputEl = document.getElementByID('fuelType');
+            // console.log('save btn clicked..'),ownerInputEl.value,catInputEl.value,fuelTypeInput.value;
+            myCar.owner = ownerInputEl.value;
+            myCar.cat = catInputEl.value;
+            myCar.fuelType = fuelTypeInputEl.value;
+            console.log('save Btn clicked..myCarInfo : ',myCar);
+        });
+
+
+
+        // object : 사물 < 객체(주체를 제외한 모든 대상)
+        const monge = 
+        {
+            // 속성
+            name: "몽이",
+            kind: "실키테리어",
+            age: 5,
+            weight: 4.5,
+            // 기능
+            sound:function(){
+                alert(this.name+"가 짖습니다-!")
+            },
+            toString:function(){
+                console.log(this.name,this.kind,this.age,this.weight);
+            }
+        }
+        // 
+        console.log(monge);
+        console.log(monge.name);
+        console.log(monge.kind);
+        console.log(monge.age);
+        // monge.sound();
+        monge.name='토리';
+        monge.toString();
+
+    </script>
+
+</body>
+</html>
