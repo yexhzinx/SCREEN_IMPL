@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- LODASH CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+</head>
+<body style="height: 8000px; margin:0;">
+    
+    <script>
+
+        //
+        console.log("_",_);
+        // window.addEventListener('scroll',()=>{
+        //     console.log(window.scrollY);
+        // })
+
+         window.addEventListener('scroll',_.throttle(()=>{
+            console.log(window.scrollY);
+         },100))
+
+    </script>
+
+</body>
+</html>

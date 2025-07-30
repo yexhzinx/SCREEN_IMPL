@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {
+            width: 1200px;
+            margin: 0 auto;
+            height: 500px;
+            border: 1px solid;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: .5s;
+        }
+
+        .move {
+            left: calc(100%-100px);
+            top : calc(100%-100px);
+            animation-name: ball;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes ball {
+            0%{ transform: rotate(0deg); background-color: black; color: white; }
+            100%{ transform: rotate(0deg); background-color: white; color: white; }
+        }
+    </style>
+</head>
+<body>
+
+    <section></section>
+    
+    <section class="scroll-section scroll-spy">
+        <div class="ball">BALL</div>
+    </section>
+
+    <section></section>
+
+    <script>
+        // 노드 검색
+        const spyedEl = document.querySelector('.scroll=spy');
+        const ballEl = documen.querySelector('.ball');
+        
+        // 스크롤매직 객체
+        const scrollMagicObj = new ScrollMagic
+                                                .Scene({
+                                                    triggerElement:spyedEl, // 감시할 요소
+                                                    triggerHook: .5,        // 스크롤위치값(0-1, 0: 최상단, .5: 화면중간, 1: 최하단)
+                                                })
+                                                .setClassToggle(ballEl,'move') // Hook대상 EL, 효과적용 class명
+                                                .addTo(new ScrollMagic.Controller())
+    </script>
+
+</body>
+</html>
